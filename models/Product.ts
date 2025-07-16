@@ -21,6 +21,15 @@ class Products {
       
     }
       
+    displayDetails(): string {
+        return `${this.id} && ${this.title} && ${this.description} && ${this.category}
+        costs $${this.price} && ${this.discountedPercentage} && ${this.sku}.`
+    }
+
+getPriceWithDicount(): number {
+    return this.price - (this.price * this.discountedPercentage)
+}
+
  }
     
    
