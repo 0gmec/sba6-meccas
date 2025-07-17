@@ -6,6 +6,7 @@ class Products {
     price: number
     discountedPercentage: number
     sku: string
+    
 
    constructor(id: number, title: string, description: string, category: string,
     price: number, discountedPercentage: number, sku: string ) {
@@ -28,6 +29,10 @@ class Products {
 
 getPriceWithDicount(): number {
     return this.price - (this.price * this.discountedPercentage)
+}
+
+getDefaultTaxRate(): string {
+    return `${this.category} && costs $${this.price}`
 }
 
  }
