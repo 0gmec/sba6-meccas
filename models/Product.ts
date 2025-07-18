@@ -31,9 +31,7 @@ getPriceWithDiscount(): number {
     return this.price - (this.price * this.discountPercentage)
 }
 
-getDefaultTaxRate(): string {
-    return `${this.category} && costs $${this.price}`
-}
+
 
  }
     
