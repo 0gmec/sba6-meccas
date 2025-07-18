@@ -1,6 +1,6 @@
 import { Products } from "../models/Product"
 
-const taxRate = 0.3
+export const taxRate = 0.3
 const standardTaxRate = 0.0475
 
 function calculateTax(price: number, category: string): number {

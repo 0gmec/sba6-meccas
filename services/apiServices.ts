@@ -1,6 +1,6 @@
 import  {Products} from "../models/Product"
 
-async function fetchProductData() {
+export async function fetchProductData() {
     try {
 const response = await fetch('https://dummyjson.com/products')
 const productData = await response. json()
