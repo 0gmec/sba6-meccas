@@ -1,6 +1,7 @@
 
 
 function calculateTax(price: number, category: string): number {
-if 
+let tax = 0.1
+let totalPrice  = 
 
 }

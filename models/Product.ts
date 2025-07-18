@@ -1,22 +1,22 @@
-class Products {
+export class Products {
     id: number
     title: string
     description: string
     category: string
     price: number
-    discountedPercentage: number
+    discountPercentage: number
     sku: string
     
 
    constructor(id: number, title: string, description: string, category: string,
-    price: number, discountedPercentage: number, sku: string ) {
+    price: number, discountPercentage: number, sku: string ) {
 
         this.id = id
         this.title = title
         this.description = description
         this.category = category
         this.price = price
-        this.discountedPercentage = discountedPercentage
+        this.discountPercentage = discountPercentage
         this.sku = sku
    
       
@@ -24,11 +24,11 @@ class Products {
       
     displayDetails(): string {
         return `${this.id} && ${this.title} && ${this.description} && ${this.category}
-        costs $${this.price} && ${this.discountedPercentage} && ${this.sku}.`
+        costs $${this.price} && ${this.discountPercentage} && ${this.sku}.`
     }
 
-getPriceWithDicount(): number {
-    return this.price - (this.price * this.discountedPercentage)
+getPriceWithDiscount(): number {
+    return this.price - (this.price * this.discountPercentage)
 }
 
 getDefaultTaxRate(): string {
