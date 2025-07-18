@@ -1,7 +1,18 @@
+import { Products } from "../models/Product"
 
+const taxRate = 0.3
+const standardTaxRate = 0.0475
 
 function calculateTax(price: number, category: string): number {
-let tax = 0.1
-let totalPrice  = 
+if (category === "groceries"){
+    return taxRate * price
+} if (category !== "groceries"){
+    return standardTaxRate * price
+} else {
+    return price * (price - standardTaxRate)
+}
+ 
 
 }
+
+console.log(calculateTax(20, "groceries"))
